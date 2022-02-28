@@ -1,0 +1,107 @@
+@import '../../colour.scss';
+
+.movie-section{
+	margin-top: 3vh;
+	padding-left:2.5vw ;
+	position:relative;
+	
+	
+	
+}
+.movie-rating{
+	padding-left: 1vw;
+	font-size: 0.7rem;
+	margin-top: 3vh;
+	color:$font-secondary;
+	display: flex;
+	width: 40vw;
+	
+	
+	
+	span{
+	margin-left: 2vw;
+	}
+}
+.movie-title{
+	font-size: 1.7rem;
+	color: $font-primary;
+	width: 50%;
+}
+.movie-plot{
+	padding-top: 3vh;
+	padding-bottom: 3vh;
+	
+	color: $font-primary;
+	line-height: 1rem;
+	font-size: 0.7rem;
+	width:50%;
+	
+
+}
+
+
+.movie-info > div span:first-child{
+	color: $font-primary;
+	width:10vw;
+	display: inline-block;
+	font-weight: 600;
+	font-size: 0.6rem;
+	padding-right:20vw;
+
+}
+.movie-info > div span{
+	color:$font-secondary;
+	padding-right: 10vw;
+	
+	
+}
+.movie-info{
+	
+	
+	font-size: 0.6rem;
+	font-weight: 600;
+	line-height: 3vh;
+	
+
+}
+.section-right{
+	display:flex;
+	justify-content: end;
+	img{
+		
+       position: absolute;
+		margin-top: 0vh;
+		top:0;
+		right: 4vh;
+		height:13rem;
+		width:17vw;
+		margin-right: 10vw;
+      
+	
+	}
+    
+}
+.Button{
+	margin-top: 6vh;
+	color:black;
+	background: bisque;
+	box-shadow: 0.1rem , 0.1rem;
+	border-radius: 0.3rem;
+	width:3rem;
+	margin-bottom: 2vh;
+	margin-left: 40vw;
+  
+
+}
+.load{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.movie-rating{
+	span{
+		i{
+			color:yellow;
+		}
+	}
+}

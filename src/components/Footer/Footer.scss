@@ -1,0 +1,13 @@
+@import '../../colour.scss';
+.footer{
+    margin-top: 2vh;
+	width: 100%;
+	height:3rem;
+	background:$secondary-color;
+	justify-content:center;
+	align-items:center;
+	color:$font-primary;
+	display:flex;
+	flex-direction:column;
+
+}

@@ -1,0 +1,53 @@
+@import '../../colour.scss';
+
+.header{
+	background-color: $secondary-color;
+	padding: 0 2rem;
+	display:flex;
+	align-items: center;
+	height:3rem;
+	justify-content: space-between;
+
+}
+.logo{
+	color: $font-primary;
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+.user-image , .user-image img{
+	height:1.7rem;
+	width:1.7rem;
+
+}
+.search{
+	display: flex;
+	margin-left: 2vw;
+	
+	
+	
+	
+
+	
+	input{
+		width:15vw;
+		padding-top: 1vh;
+		background: transparent;
+		border: 0px solid;
+		color: #CCC;
+		justify-content: flex-end;
+		
+	}
+	button{
+		margin-left: 0.5vw;
+		background: transparent;
+		border-radius: 0.3rem;
+		color:#CCC;
+		box-shadow: 0rem;
+		box-shadow: none;
+		outline-width: 0.1rem;
+		outline-color: #fff;
+		outline-style: solid;
+		cursor: pointer;
+		
+	}
+}

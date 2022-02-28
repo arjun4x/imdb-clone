@@ -1,0 +1,47 @@
+@import '../../colour.scss';
+.card {
+
+
+	background:$secondary-color ;
+	cursor:pointer;
+	transition: all 0.3s;
+	&:hover{
+		transform: scale(1.2);
+		transition: all 0.2s;
+	}
+}
+.card-top{
+	
+	height: 9rem;
+	width:5rem;
+	padding: 0.9rem;
+	
+	
+	
+	img{
+		
+		width:7rem;
+		height:9rem;
+	
+		
+	}
+}
+.card-info{
+	color:$font-primary;
+	display : grid;
+
+	
+	h4{
+		
+		font-size:0.8rem;
+		font-weight: 400;
+		margin-bottom :3vh;
+	
+	
+
+	}
+
+}
+.card-bottom{
+	padding:1.5rem;
+}
