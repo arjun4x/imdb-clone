@@ -14,14 +14,13 @@ export  const fetchAsyncMovies = createAsyncThunk('movies/fetchAsyncMovies',
     let response = await MovieApi.get(`?apiKey=${MovieApiKey}&s=${searchValue}&type=movie`); 
 	console.log(response.data);
 	
-	if(response){
 		if(!response){
 			return response = false;
 		}else{
 			return response.data;
 		}
    
-   }
+   
 
 	
    });
@@ -38,17 +37,15 @@ export  const fetchAsyncMovies = createAsyncThunk('movies/fetchAsyncMovies',
 		   searchValue = "love"
 
 	   }
-	   
 	 let response = await MovieApi.get(`?apiKey=${MovieApiKey}&s=${searchValue}&type=series`); 
 	 console.log(response.data);
-	 if(response){
-		 if(!response.data){
-			 return (response=false);
+		 if(!response){
+			 return response = false;
 		 }else{
 			 return response.data;
 
 		 }
-		}
+		
 	
 	});
 
@@ -64,7 +61,7 @@ export  const fetchAsyncMovies = createAsyncThunk('movies/fetchAsyncMovies',
 
  const initialState = {
 	movie:{},
-	series:{},
+	seriess:{},
 	details:{},
 	
     };
@@ -93,6 +90,7 @@ export  const fetchAsyncMovies = createAsyncThunk('movies/fetchAsyncMovies',
 			console.log('pending');
 		},
 		[fetchAsyncSeries.fulfilled]:(state,{payload})=>{
+			console.log("fullfilled");
 			return {...state, series:payload}
 		},
 		[fetchAsyncSeries.rejected]:()=>{

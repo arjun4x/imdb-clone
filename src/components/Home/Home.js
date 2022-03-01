@@ -2,8 +2,8 @@ import React,{useEffect} from 'react'
 import MovieList from '../MovieList/MovieList';
 import { useDispatch } from 'react-redux';
 import {  fetchAsyncMovies, fetchAsyncSeries } from '../../features/Movies/movieSlice';
-import './Home.scss';
-import Banner from './Banner/Banner';
+
+
 
 
 const Home = () => {
@@ -15,9 +15,6 @@ dispatch(fetchAsyncMovies());
   },[dispatch]);
   return (
 	<div className='home' >
-    {/* <div className='banner'>
-      <Banner/>
-    </div> */}
     <MovieList/>
   </div>
   )

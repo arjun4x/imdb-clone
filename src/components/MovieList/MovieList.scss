@@ -1,9 +1,11 @@
-.error{
-	margin-top: 30vh;
-	margin-bottom: 30vh;
-	margin-left: 30vw;
-	margin-right: 30vw;
-	color:rgba($color: #666, $alpha: 1.0)
-	
-	
+.offline{
+display: flex;
+justify-content: center;
+margin-top: 45vh;
+margin-bottom: 50vh;	
+color:#666;
+font-size: 3rem;
+}
+.eror{
+	color:#666
 }

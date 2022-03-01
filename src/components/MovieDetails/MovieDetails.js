@@ -17,22 +17,19 @@ const dispatch = useDispatch();
   },[dispatch])
 const details = useSelector(getAllDetails);
   console.log(details);
-  let data='';
-  if(details){
-    data =<h1>Loading.....</h1>;
-if(!details){
-  data =<h1>Loading.....</h1>;
+const load=<div className='load'>
+            <p>Loading....</p>
+            </div> 
+
+ const  data = <Data details={details}/> 
+
+
   
-}else{
-
-  data = <Data details={details}/> 
-
-}
-  }
 
   return (
     <div>
-    {data}
+    {!details && load}
+    {details && data}
     </div>
   )
 }

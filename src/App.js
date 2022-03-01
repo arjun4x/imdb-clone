@@ -6,8 +6,6 @@ import Home from './components/Home/Home';
 import MovieDetails from './components/MovieDetails/MovieDetails';
 import PageNotFound from './components/PageNotFound/PageNotFound';
 import Header from './components/Header/Header';
-// import {ErrorBoundary, useErrorHandler} from 'react-error-boundary';
-// import { Fallback } from './components/Error/Fallback';
 
 const App = () => {
 
@@ -17,7 +15,6 @@ const App = () => {
 
   return (
     <div className='app'>
-  {/* <ErrorBoundary FallbackComponent={Fallback} onError={errorHandler}> */}
  <Router>
   <Header></Header>
   <Routes>
@@ -27,7 +24,6 @@ const App = () => {
   </Routes>
   <Footer/>
 </Router>
-{/* </ErrorBoundary> */}
 </div>
   )  
 }

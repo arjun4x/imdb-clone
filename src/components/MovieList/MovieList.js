@@ -4,6 +4,7 @@ import {getAllMovies, getAllSeries} from '../../features/Movies/movieSlice';
 import MovieCard from '../MovieCard/MovieCard';
 import './MovieList.scss'; 
 import List from './List';
+import { Offline} from "react-detect-offline";
 
  const MovieList = (props) => {
  let movie,series= ''; 
@@ -13,23 +14,46 @@ import List from './List';
   console.log(movies);
   console.log(seriess);
  
-  const error = <h1 className="error">Something went wrong</h1>
- 
-if(movies && seriess){
-  if(movies.Error){
-    movie=<h1>{movies.Error}</h1>
-    series=<h1>{seriess.Error}</h1>;
-  }else if(seriess.Error ){
-    series=<h1>{seriess.Error}</h1>;
+  const error = <div className='offline'>
+                 <Offline >Something went wrong !!!!  </Offline>
+                 </div>
+const load = <div className='offline'>
+             <p>Loading ....</p>
+             </div>
+const Unknown = <h1>Something went wrong</h1>             
+  
+
+  let data ='';
+  if(!movies && !seriess){
+    data = Unknown;
+  }
+
+
+
+if(movies && seriess) {
+  if(movies.Error ){
+    movie=<h1 className='eror'>{movies.Error}</h1>
+    series=<h1 className='eror'>{seriess.Error}</h1>;
+  
+  }else if(seriess.Error) {
+    series=<h1 className='eror'>{seriess.Error}</h1>;
+
   }else{
-  movie = movies.Search.map((movie,index)=><MovieCard  key={index} data={movie}/>)
-  series = seriess.Search.map((movie,index)=><MovieCard  key={index} data={movie}/>)
+    movie = movies.Search.map((movie,index)=><MovieCard  key={index} data={movie}/>)
+    series = seriess.Search.map((movie,index)=><MovieCard  key={index} data={movie}/>)
   }
 }
+ 
+  data=<List movie={movie} series={series}/> ;
+
+ 
   return (
     <div>
-{!movies ? error :<List movie= {movie} series={series}/>}
+{!movie && load}
+{!movie && error}
+{movie && data}
 </div>
+
   )
 }
 
